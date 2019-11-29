@@ -2,6 +2,19 @@
 body{
 	font-family: 'Lato', sans-serif;
 }
+
+#jumbo {
+	padding: 20px;
+  }
+
+#hipster {
+	font-size: 37px;
+  }
+
+#hipster2 {
+	font-size: 23px;
+  }
+
 .team{
     padding:75px 0;
 }
@@ -89,7 +102,9 @@ h6.description{
 }
 a{
 	/* color:#88C425; */
-	color: rgba(255,255,255,.9);
+
+	/* color: rgba(255,255,255,.9); */
+	color: rgba(0, 0, 0, 0.9);
 }
 a:hover{
 	/*color:#519548; */

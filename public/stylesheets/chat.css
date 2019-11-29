@@ -5,12 +5,9 @@ body,html{
    background: -webkit-linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5);
     background: linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5); */
 
-    background-image: linear-gradient(
-        135deg,
-        rgb(24, 42, 115) 0%,
-        rgb(33, 138, 174) 69%,
-        rgb(32, 167, 172) 89%
-      ) !important;
+    background: #7F7FD5;
+    background: -webkit-linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5);
+     background: linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5) !important;
     
       height: 100%;
       margin: 0;
