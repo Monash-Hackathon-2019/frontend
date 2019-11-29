@@ -1,0 +1,222 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Chat</title>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.js"></script>
+        
+        <link rel="stylesheet" type="text/css" href="/stylesheets/chat.css">
+        <link rel="javascript" type="text/css" href="/js/chat.js"> <!--Doesnt work-->
+	</head>
+	
+	<body>
+
+		<div class="container-fluid h-100">
+			<div class="row justify-content-center h-100">
+				<div class="col-md-4 col-xl-3 chat"><div class="card mb-sm-3 mb-md-0 contacts_card">
+					<div class="card-header">
+						<div class="input-group">
+							<input type="text" placeholder="Search..." name="" class="form-control search">
+							<div class="input-group-prepend">
+								<span class="input-group-text search_btn"><i class="fas fa-search"></i></span>
+							</div>
+						</div>
+					</div>
+					<div class="card-body contacts_body">
+						<ui class="contacts">
+						<li class="active">
+							<div class="d-flex bd-highlight">
+								<div class="img_cont">
+									<img src="https://semantic-ui.com/images/avatar/large/joe.jpg" class="rounded-circle user_img">
+									<span class="online_icon"></span>
+								</div>
+								<div class="user_info">
+									<span>James Chan</span>
+									<p>James is online</p>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="d-flex bd-highlight">
+								<div class="img_cont">
+									<img src="https://semantic-ui.com/images/avatar2/large/molly.png" class="rounded-circle user_img">
+									<span class="online_icon offline"></span>
+								</div>
+								<div class="user_info">
+									<span>Sonia Perrera</span>
+									<p>Sonia left 7 mins ago</p>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="d-flex bd-highlight">
+								<div class="img_cont">
+									<img src="https://semantic-ui.com/images/avatar/large/justen.jpg" class="rounded-circle user_img">
+									<span class="online_icon"></span>
+								</div>
+								<div class="user_info">
+									<span>Jackson Lee</span>
+									<p>Jackson is online</p>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="d-flex bd-highlight">
+								<div class="img_cont">
+									<img src="https://i.pinimg.com/originals/60/7f/f2/607ff22d230565a215aacbe900fba2c2.jpg" class="rounded-circle user_img">
+									<span class="online_icon offline"></span>
+								</div>
+								<div class="user_info">
+									<span>Racheal Sun</span>
+									<p>Racheal left 30 mins ago</p>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="d-flex bd-highlight">
+								<div class="img_cont">
+									<img src="https://semantic-ui.com/images/avatar/large/daniel.jpg" class="rounded-circle user_img">
+									<span class="online_icon offline"></span>
+								</div>
+								<div class="user_info">
+									<span>Daniel Ng</span>
+									<p>Daniel left 50 mins ago</p>
+								</div>
+							</div>
+						</li>
+						</ui>
+					</div>
+					<div class="card-footer"></div>
+				</div></div>
+				<div class="col-md-8 col-xl-6 chat">
+					<div class="card">
+						<div class="card-header msg_head">
+							<div class="d-flex bd-highlight">
+								<div class="img_cont">
+									<img src="https://semantic-ui.com/images/avatar/large/joe.jpg" class="rounded-circle user_img">
+									<span class="online_icon"></span>
+								</div>
+								<div class="user_info">
+									<span>Chat with James</span>
+									<p>6 Messages</p>
+								</div>
+								<div class="video_cam">
+									<span><i class="fas fa-video"></i></span>
+									<span><i class="fas fa-phone"></i></span>
+								</div>
+							</div>
+							<span id="action_menu_btn"><i class="fas fa-ellipsis-v"></i></span>
+							<div class="action_menu">
+								<ul>
+									<a href="/market"><li><i class="fas fa-user-circle"></i> Back to Market</li></a>
+									<li><i class="fas fa-users"></i> Add to close friends</li>
+									<li><i class="fas fa-plus"></i> Add to group</li>
+									<li><i class="fas fa-ban"></i> Block</li>
+								</ul>
+							</div>
+						</div>
+						<div class="card-body msg_card_body">
+							<div class="d-flex justify-content-start mb-4">
+								<div class="img_cont_msg">
+									<img src="https://cdn3.iconfinder.com/data/icons/seo-concept-modern/512/Robot_services_flat_icon_seo_pack_web-512.png" class="rounded-circle user_img_msg">
+								</div>
+								<div class="msg_cotainer">
+									<i>Say Hi, and remember to be nice!</i>
+									<span class="msg_time">Studdit Bot</span>
+								</div>
+							</div>
+							<div class="d-flex justify-content-end mb-4">
+								<div class="msg_cotainer_send">
+									Hello James, I am interested in puchasing your book.
+									<span class="msg_time_send">8:55 AM, Today</span>
+								</div>
+								<div class="img_cont_msg">
+							<img src="https://semantic-ui.com/images/avatar/large/chris.jpg" class="rounded-circle user_img_msg">
+								</div>
+							</div>
+							<div class="d-flex justify-content-start mb-4">
+								<div class="img_cont_msg">
+									<img src="https://semantic-ui.com/images/avatar/large/joe.jpg" class="rounded-circle user_img_msg">
+								</div>
+								<div class="msg_cotainer">
+									That's amazing, thank you for your interest. 
+									<span class="msg_time">9:00 AM, Today</span>
+								</div>
+							</div>
+							<div class="d-flex justify-content-end mb-4">
+								<div class="msg_cotainer_send">
+									What is your best price?
+									<span class="msg_time_send">9:05 AM, Today</span>
+								</div>
+								<div class="img_cont_msg">
+							<img src="https://semantic-ui.com/images/avatar/large/chris.jpg" class="rounded-circle user_img_msg">
+								</div>
+							</div>
+							<div class="d-flex justify-content-start mb-4">
+								<div class="img_cont_msg">
+									<img src="https://semantic-ui.com/images/avatar/large/joe.jpg" class="rounded-circle user_img_msg">
+								</div>
+								<div class="msg_cotainer">
+									I don't mind letting it go for $3 ringgit :)
+									<span class="msg_time">9:07 AM, Today</span>
+								</div>
+							</div>
+							<div class="d-flex justify-content-end mb-4">
+								<div class="msg_cotainer_send">
+									Perfect, let's meet up at the library tomorrow! 1pm
+									<span class="msg_time_send">9:10 AM, Today</span>
+								</div>
+								<div class="img_cont_msg">
+						<img src="https://semantic-ui.com/images/avatar/large/chris.jpg" class="rounded-circle user_img_msg">
+								</div>
+							</div>
+							<div class="d-flex justify-content-start mb-4">
+								<div class="img_cont_msg">
+									<img src="https://semantic-ui.com/images/avatar/large/joe.jpg" class="rounded-circle user_img_msg">
+								</div>
+								<div class="msg_cotainer">
+									Sounds good, see you Ryan!
+									<span class="msg_time">9:12 AM, Today</span>
+								</div>
+							</div>
+						</div>
+						<div class="card-footer">
+							<div class="input-group">
+								<div class="input-group-append">
+									<span class="input-group-text attach_btn"><i class="fas fa-paperclip"></i></span>
+								</div>
+								<textarea name="" class="form-control type_msg" placeholder="Type your message..."></textarea>
+								<div class="input-group-append">
+									<span class="input-group-text send_btn"><i class="fas fa-location-arrow"></i></span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+        </div>
+        
+<script>
+
+$(document).ready(function(){
+            $('#action_menu_btn').click(function(){
+                $('.action_menu').toggle();
+            });
+                });
+
+
+
+</script>
+
+
+
+	</body>
+</html>
