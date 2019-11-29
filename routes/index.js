@@ -14,6 +14,10 @@ router.get('/mentor/example', function(req,res){
 	res.render("mentor_show");
 });
 
+router.get('/chat/example', function(req,res){
+	res.render("chat");
+});
+
 router.get('/home', isLoggedIn, function(req, res){
 	
 	// TAKEN FROM DB
