@@ -14,6 +14,10 @@ router.get('/mentor/example', function(req,res){
 	res.render("mentor_show");
 });
 
+router.get('/market', function(req,res){
+	res.render("market_index");
+});
+
 router.get('/chat/example', function(req,res){
 	res.render("chat");
 });
