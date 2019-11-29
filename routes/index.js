@@ -19,7 +19,7 @@ router.get('/market', function(req,res){
 });
 
 router.get('/frontpage', function(req,res){
-	res.render("frontpage2");
+	res.render("frontpage");
 });
 
 router.get('/market/example', function(req,res){
