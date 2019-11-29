@@ -18,6 +18,10 @@ router.get('/market', function(req,res){
 	res.render("market_index");
 });
 
+router.get('/frontpage', function(req,res){
+	res.render("frontpage2");
+});
+
 router.get('/market/example', function(req,res){
 	res.render("market_chat");
 });
