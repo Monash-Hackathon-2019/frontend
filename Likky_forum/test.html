@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+
+<html>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+	<head>
+		<script>
+			function recommend(value,index,array){
+				var temp = document.getElementById("disp").innerHTML;
+				display = temp + "<div class=\"card\"><div class=\"card-header\">Popular Today</div><div class=\"card-body\"><h5 class=\"card-title\">" + value + "</h5><p class=\"card-text\">Some information on this forum.</p><a href=\"forum.html?Title=" + value + "\" class=\"btn btn-primary\">View</a></div></div><br>"	
+					document.getElementById("disp").innerHTML = display;
+			}
+
+			function retrieveList(){
+				//meant to retrieve list from database
+				document.getElementById("disp").innerHTML = "<h2>Recomendations</h2><br>";
+				var dummies = ["Dummy forum 1", "Dummy forum 2", "Dummy forum 3"]
+				dummies.forEach(recommend);
+			}
+
+			function search(){
+				var item = document.getElementById("item").value;
+
+				newLocation = "test2.html" + "?search=" + item; 
+				window.location = newLocation;
+			}
+		</script>
+
+		<title>Forums page</title>
+	</head>
+
+	<body>
+		<h1><center>Forums</center></h1>
+
+		<nav class="navbar navbar-light bg-light">
+		  <a class="navbar-brand">Search in forums</a>
+		  <form class="form-inline">
+		    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" id="item">
+		    <button class="btn btn-outline-success my-2 my-sm-0" type="button" onclick="search()">Search</button>
+		  </form>
+		</nav>
+
+		<br><hr>
+
+		<div class="container">
+		  <div class="row">
+		    <div class="col-8">
+		    	<span id="disp">
+				</span>
+		    </div>
+		    <div class="col-4">
+		    	Space for advertisments
+		    </div>
+		  </div>
+		</div>
+		
+
+		<script>
+			retrieveList();
+		</script>
+
+	</body>
+
+	
+
+</html>

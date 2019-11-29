@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<html>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+	<head>
+		<title>Forums page</title>
+	</head>
+
+	<body>
+
+		<div class="container">
+		  <div class="row">
+		    <div class="col-8">
+		    	<h1 id="title"></h1><br>
+
+
+				<div class="card"><div class="card-header">Posted by: A hero</div><div class="card-body"><p class="card-text">Main information relevant to forum to be retrieved from database. Could not access database.</p></div></div><br>
+
+				<p style="text-indent: 20px">
+					<b>Comments</b><br>
+				</p>
+
+				<p style="text-indent: 40px">
+					Wow! despite the lack of functionality, I like this app!
+				</p>
+
+				<br>
+				<button class="btn btn-outline-success my-2 my-sm-0" type="button" onclick="window.history.back()">Return to Forums</button>
+				<a href="C:/Users/Liksern/Desktop/Temp/html/home.html">Return to homepage</a>
+		    </div>
+		    <div class="col-4">
+		    	Space for advertisments
+		    </div>
+		  </div>
+		</div>
+
+		<script>
+			var item = location.search;
+			item = item.replace("?Title=","");
+			item = item.replace(/%20/g," ");
+			document.getElementById("title").innerHTML = item;
+		</script>
+
+	</body>
+
+</html>
