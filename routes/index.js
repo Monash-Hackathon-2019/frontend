@@ -10,6 +10,10 @@ router.get('/', function(req,res){
 	res.render("landing");
 });
 
+router.get('/mentor/example', function(req,res){
+	res.render("mentor_show");
+});
+
 router.get('/home', isLoggedIn, function(req, res){
 	
 	// TAKEN FROM DB
