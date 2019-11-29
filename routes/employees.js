@@ -6,13 +6,13 @@ var	Lot = require('../models/lot');
 var	Process = require('../models/process');
 		
 
-router.get('/employees', isLoggedIn, function(req,res){
+router.get('/mentor', isLoggedIn, function(req,res){
 	//GET ALL EMPLOYEES FROM DB
 	Employee.find({}, function(err, employeesData){ //{} means you take everything from DB
 		if(err){
 			console.log(err);
 		} else {
-			res.render('employee_index',{employee:employeesData});
+			res.render('mentor_index');
 		}
 	});
 });
