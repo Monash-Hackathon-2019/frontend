@@ -11,14 +11,14 @@
 		<script>
 			function recommend(value,index,array){
 				var temp = document.getElementById("disp").innerHTML;
-				display = temp + "<div class=\"card\"><div class=\"card-header\">Popular Today</div><div class=\"card-body\"><h5 class=\"card-title\"><b>" + value + "</b></h5><p class=\"card-text\">Some information on this forum.</p><a href=\"forum.html?Title=" + value + "\" class=\"btn btn-primary\">View</a></div></div><br>"	
+				display = temp + "<div class=\"card\"><div class=\"card-header\">Popular Today</div><div class=\"card-body\"><h5 class=\"card-title\"><b>" + value + "</b></h5><p class=\"card-text\">Leverage databases for brief description of these forums!</p><a href=\"forum.html?Title=" + value + "\" class=\"btn btn-primary\">View</a></div></div><br>"	
 					document.getElementById("disp").innerHTML = display;
 			}
 
 			function retrieveList(){
 				//meant to retrieve list from database
 				document.getElementById("disp").innerHTML = "<h2 style=\"color: white\">Recommendations</h2><br>";
-				var dummies = ["Dummy forum 1", "Dummy forum 2", "Dummy forum 3"]
+				var dummies = ["Tips to study for exams", "Great places to eat nearby!", "Computer science courses open now. Join now!"]
 				dummies.forEach(recommend);
 			}
 
@@ -38,7 +38,7 @@
         <h1 style="color: white"><center>Forums</center></h1>
         
 		<nav class="navbar navbar-light bg-light">
-		  <a class="navbar-brand">Welcome to the Studdit Forums, where questions are asked and answered!</a>
+		  <a class="navbar-brand">Welcome to the AfterKlas Forums, where questions are asked and answered!</a>
 		  <form class="form-inline">
 		    <input class="form-control mr-sm-2" type="search" placeholder="Search Forums" aria-label="Search" id="item">
 		    <button class="btn btn-outline-success my-2 my-sm-0" type="button" onclick="search()">Search</button>
