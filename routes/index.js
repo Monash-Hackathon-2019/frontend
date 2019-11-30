@@ -22,6 +22,10 @@ router.get('/frontpage', function(req,res){
 	res.render("frontpage");
 });
 
+router.get('/mentor/new', function(req,res){
+	res.render("mentor_new");
+});
+
 router.get('/market/example', function(req,res){
 	res.render("market_chat");
 });
