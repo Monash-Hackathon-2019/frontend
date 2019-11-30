@@ -18,6 +18,43 @@ router.get('/market', function(req,res){
 	res.render("market_index");
 });
 
+router.get('/frontpage/forum', function(req,res){
+	res.render("forum");
+});
+
+router.get('/qa', function(req,res){
+	res.render("qa");
+	
+	// const spawn = require("child_process").spawn;
+	// var runOnce = 0;
+	// while (runOnce == 0){
+
+	// 	//   spawn('touch', ['100.txt'])
+
+
+	// spawn('python',["./scraper.py"])
+	// console.log("Python running")
+	// runOnce++
+	// }
+
+	// var fs = require('fs');
+	// var i = 0;
+
+	// while(!fs.existsSync('100.txt') && runOnce > 0){
+	// 	i++;
+	// 	if(i==100){
+	// 		i=0;
+	// 	}
+	// }
+
+	// if(fs.existsSync('100.txt')){
+	// 	var textByLine = fs.readFileSync('100.txt').toString();
+	// 	console.log(textByLine);
+	// 	res.render("qa", {textByLine: textByLine} );
+	// }
+
+});
+
 router.get('/frontpage', function(req,res){
 	res.render("frontpage");
 });
