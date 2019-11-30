@@ -82,10 +82,17 @@ body {
 
 h2 {
   padding-top: 15px;
+  color: white;
 }
 h1 {
   font-weight: 700;
   font-size: 5em;
+  color: white;
+  font-weight: bold;
+}
+
+#performance {
+  color: rgba(0,0,0,0.8);
 }
 
 hr {
@@ -100,4 +107,8 @@ html {
 
 .jumbotron {
   color: #4a4f59;
+}
+
+#landingpara {
+  color: white;
 }

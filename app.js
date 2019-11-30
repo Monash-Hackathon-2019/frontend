@@ -151,5 +151,5 @@ function isLoggedIn(req,res, next){
 
 //app.listen(3000, function(){   // DEBUG LOCALLY
 app.listen(process.env.PORT || 3000, function(){  //DEPLOYMENT
-	console.log('Omni Analytics v10 server listening on port 5000');
+	console.log('AfterKlas v10 server listening on port 3000');
 });
