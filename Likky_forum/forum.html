@@ -1,130 +1,71 @@
 <!DOCTYPE html>
 
 <html>
-  <link
-    rel="stylesheet"
-    href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
-    crossorigin="anonymous"
-  />
-  <script
-    src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-    crossorigin="anonymous"
-  ></script>
-  <script
-    src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-    crossorigin="anonymous"
-  ></script>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="styles.css" media="screen"/>
 
-  <link rel="stylesheet" type="text/css" href="/public/stylesheets/styles.css" media="screen" />
+	<head>
+        <script>
+			function search(){
+				var item = document.getElementById("item").value;
 
-  <head>
-    <title>Forums page</title>
-  </head>
+				newLocation = "test2.html" + "?search=" + item; 
+				window.location = newLocation;
+			}
+		</script>
+		<title>Forums page</title>
+	</head>
+    
+	<body>
+        <h1 style="color: white"><center>Forums</center></h1>
+        
+        <nav class="navbar navbar-light bg-light">
+          <a class="navbar-brand">Welcome to the Studdit Forums, where questions are asked and answered!</a>
+          <form class="form-inline">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search Forums" aria-label="Search" id="item">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="button" onclick="search()">Search</button>
+          </form>
+        </nav>
+        
+        <br><hr>
+		<div class="container">
+		  <div class="row">
+		    <div class="col-8">
+		    	<h2 id="title" style="color: white"></h2><br>
 
-  <body>
-    <h1 style="color: white"><center>Forums</center></h1>
+                <div class="card"><div class="card-header"><b>Posted by: One of the Horsemen</b></div><div class="card-body"><p class="card-text">I have found AfterKlas to have many advantages, like:<br>- Providing up to date info on happenings in the university<br>- Bridging the gap between strong and weak students<br>- Bringing students closer together<br>In my opinion, this app is the APP to have for students!</p></div></div><br>
 
-    <nav class="navbar navbar-light bg-light">
-      <a class="navbar-brand"
-        >Welcome to the Studdit Forums, where questions are asked and
-        answered!</a
-      >
-      <form class="form-inline">
-        <input
-          class="form-control mr-sm-2"
-          type="search"
-          placeholder="Search Forums"
-          aria-label="Search"
-          id="item"
-        />
-        <button
-          class="btn btn-outline-success my-2 my-sm-0"
-          type="button"
-          onclick="search()"
-        >
-          Search
-        </button>
-      </form>
-    </nav>
+				<p style="text-indent: 20px; color: white">
+					<b>Comments</b><br>
+				</p>
+                
+                <div class="card" style="margin-left: 40px"><div class="card-header"><b>User9001</b></div><div class="card-body"><p class="card-text">I agree. There is also the marketplace, that's where I got some very useful notes!</p></div></div><br>
 
-    <br />
-    <hr />
-    <div class="container">
-      <div class="row">
-        <div class="col-8">
-          <h2 id="title" style="color: white"></h2>
-          <br />
+				<br>
+				<button class="btn btn-dark" type="button" style="color: white" onclick="window.history.back()">Return to Forums</button> <a href="home.html" class="btn btn-dark">Return to Homepage</a><br><br>
+		    </div>
+		    <div class="col-4">
+		    	<div class="card" style="width: 18rem;">
+                  <div class="card-body">
+                      <br>
+                    <p class="card-text"><center>Space <br> for <br> advertisments</center></p>
+                      <br>
+                  </div>
+                </div>
+		    </div>
+		  </div>
+		</div>
 
-          <div class="card">
-            <div class="card-header"><b>Posted by: A hero</b></div>
-            <div class="card-body">
-              <p class="card-text">
-                Main information relevant to forum to be retrieved from
-                database. Could not access database.
-              </p>
-            </div>
-          </div>
-          <br />
+		<script>
+			var item = location.search;
+			item = item.replace("?Title=","");
+			item = item.replace(/%20/g," ");
+			document.getElementById("title").innerHTML = item;
+		</script>
 
-          <p style="text-indent: 20px; color: white"><b>Comments</b><br /></p>
+	</body>
 
-          <div class="card" style="margin-left: 40px">
-            <div class="card-header"><b>User9001</b></div>
-            <div class="card-body">
-              <p class="card-text">
-                Wow! despite the lack of functionality, I like this app!
-              </p>
-            </div>
-          </div>
-          <br />
-
-          <br />
-          <button
-            class="btn btn-dark"
-            type="button"
-            style="color: white"
-            onclick="window.history.back()"
-          >
-            Return to Forums
-          </button>
-          <a href="home.html" class="btn btn-dark">Return to Homepage</a
-          ><br /><br />
-        </div>
-        <div class="col-4">
-          <div class="card" style="width: 18rem;">
-            <div class="card-body">
-              <br />
-              <p class="card-text">
-                <center>
-                  Space <br />
-                  for <br />
-                  advertisments
-                </center>
-              </p>
-              <br />
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <script>
-      var item = location.search;
-      item = item.replace("?Title=", "");
-      item = item.replace(/%20/g, " ");
-      document.getElementById("title").innerHTML = item;
-	</script>
-	
-    <script>
-      function search() {
-        var item = document.getElementById("item").value;
-
-        newLocation = "test2.html" + "?search=" + item;
-        window.location = newLocation;
-      }
-    </script>
-  </body>
 </html>

@@ -22,16 +22,17 @@
 				{
 					count++;
 					var temp = document.getElementById("disp").innerHTML;
-					display = temp + "<div class=\"card\"><div class=\"card-body\"><h5 class=\"card-title\"><b>" + value + "</b></h5><p class=\"card-text\">Some information on this forum</p><a href=\"forum.html?Title=" + value + "\" class=\"btn btn-primary\">View</a></div></div><br>"	
+					display = temp + "<div class=\"card\"><div class=\"card-body\"><h5 class=\"card-title\"><b>" + value + "</b></h5><p class=\"card-text\">Discuss now through AfterKlas Forums, read after class though!</p><a href=\"forum.html?Title=" + value + "\" class=\"btn btn-primary\">View</a></div></div><br>"	
 					document.getElementById("disp").innerHTML = display;
 				}
 			}
 
 			function retrieveList(){
-
+                var item = location.search;
+				item = item.replace("?search=","");
 				//meant to retrieve list from database
-				document.getElementById("disp").innerHTML = "<h2 style=\"color: white\">Search Results</h2><br>";
-				var dummies = ["Leaked exams", "FYP - With this secret method it's not longer a challenge!", "Answers to your exams this Sem, only $9.99", "Secret forum for the geniuses", "The ultimate techniques to win at life", "Synchronous motors", "Computer science for dummies", "Yasser's secret studying techniques, finally revealed!", "Cure a cold in one day or less.",]
+				document.getElementById("disp").innerHTML = "<h2 style=\"color: white\">Search Results - <b>" + item + "</b></h2><br>";
+				var dummies = [ "Synchronous motors", "Advantages of AfterKlas", "Popular in AfterKlas - Is Tesla lying about electric car efficiencies?", "Is there actually hacking in hackathons?",  "The Monash Hackathon conspiracy.", "AfterKlas tops PLaystore charts!", "Unit selection advice.", "Course enrolment advice." ]
 				dummies.forEach(displayFound);
 				if (count == 0){
 					document.getElementById("disp").innerHTML = "<h2 style=\"color:white\">Search Results</h2><p style=\"color:white\">No results found</p>";
